@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Vitória Lopes | Psicóloga & Neuropsicóloga</title>
+    <meta name="description" content="Psicóloga Maria Vitória Lopes (CRP 06/220011). Avaliação Neuropsicológica, Psicoterapia TCC e atendimento para adultos, idosos e adolescentes.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-cream: #F5F2EB;
+            --bg-white: #FFFFFF;
+            --text-dark: #2C2C2C;
+            --text-muted: #5A5A5A;
+            --primary-green: #4A5D4E;
+            --accent-gold: #C6A87C;
+            --accent-nude: #E8DCD3;
+            
+            --font-heading: 'Playfair Display', serif;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-body: 'Inter', sans-serif;
+            
+            --container-width: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth; /* Scroll suave nativo */
+        }
+
+        body {
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            color: var(--primary-green);
+            font-weight: 600;
+        }
+
+        .handwritten {
+            font-family: var(--font-serif);
+            font-style: italic;
+            color: var(--accent-gold);
+            font-weight: 400;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header Atualizado */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(245, 242, 235, 0.95);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(198, 168, 124, 0.2);
+        }
+
+        .logo-link {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 1.1;
+            cursor: pointer;
+        }
+
+        .logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            color: var(--primary-green);
+            letter-spacing: 1px;
+        }
+        
+        .logo-sub {
+            font-family: var(--font-body);
+            font-size: 0.6rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent-gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%); /* Centraliza o menu */
+        }
+
+        .nav-links a {
+            font-size: 0.85rem;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: background 0.3s, transform 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary:hover {
+            background-color: #38473b;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 10rem 2rem 5rem;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-text h1 .highlight {
+            color: var(--accent-gold);
+            font-style: italic;
+            font-family: var(--font-serif);
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 90%;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 200px 200px 20px 20px;
+            border: 8px solid var(--bg-white);
+            box-shadow: 20px 20px 0px var(--accent-nude);
+            display: block;
+            margin-left: auto;
+            object-fit: cover;
+            object-position: center 5%;
+            aspect-ratio: 4/5;
+        }
+
+        /* Credentials Bar */
+        .credentials-bar {
+            background-color: var(--bg-white);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+            border-top: 1px solid var(--accent-nude);
+            border-bottom: 1px solid var(--accent-nude);
+        }
+
+        .credential-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--primary-green);
+            font-weight: 500;
+        }
+
+        /* Section Generic */
+        section {
+            padding: 6rem 2rem;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* Neuro Section */
+        .neuro-section {
+            background-color: var(--bg-white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .neuro-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23E8DCD3"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>') no-repeat center;
+            background-size: contain;
+            opacity: 0.1;
+            transform: translateY(-50%);
+            z-index: 0;
+        }
+
+        .neuro-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .neuro-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .neuro-text .subtitle {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        .neuro-text p {
+            margin-bottom: 2rem;
+            color: var(--text-muted);
+        }
+
+        .neuro-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .neuro-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            background: var(--bg-cream);
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-gold);
+        }
+
+        .neuro-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        /* Therapy Section */
+        .therapy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .therapy-card {
+            background: var(--bg-white);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            border: 1px solid var(--accent-nude);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .therapy-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+        }
+
+        .therapy-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .therapy-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+        
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: var(--accent-nude);
+            color: var(--primary-green);
+            font-size: 0.75rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-weight: 500;
+        }
+
+        /* FAQ Section (Novo Conteúdo Explicativo) */
+        .faq-section {
+            background-color: var(--bg-white);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--accent-nude);
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-item h4 {
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .faq-item h4::before {
+            content: '?';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: var(--accent-gold);
+            color: white;
+            border-radius: 50%;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .faq-item p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            padding-left: 2rem;
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: var(--primary-green);
+            color: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-text .handwritten {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 1rem;
+            color: var(--accent-gold);
+        }
+
+        .about-text p {
+            color: #E0E0E0;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            border: 5px solid var(--accent-gold);
+            object-fit: cover;
+            object-position: center 5%;
+            aspect-ratio: 4/5;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1A231B;
+            color: #888;
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #333;
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .footer-info p {
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Mobile */
+        @media (max-width: 900px) {
+            .hero, .neuro-content, .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 3rem;
+            }
+
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+
+            .hero-image img {
+                margin: 0 auto;
+            }
+            
+            .neuro-list {
+                grid-template-columns: 1fr;
+                text-align: left;
+            }
+
+            .nav-links {
+                display: none; /* Esconde menu no mobile para simplificar */
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body id="top">
+
+    <header>
+        <!-- Logo clicável para o topo -->
+        <a href="#top" class="logo-link">
+            <span class="logo-text">MV LOPES</span>
+            <span class="logo-sub">Psicologia</span>
+        </a>
+        
+        <nav class="nav-links">
+            <a href="#avaliacao">Avaliação</a>
+            <a href="#psicoterapia">Psicoterapia</a>
+            <a href="#faq">Dúvidas</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+        
+        <!-- Link do WhatsApp com mensagem pré-formatada -->
+        <a href="https://wa.me/5519998722126?text=Ol%C3%A1%2C%20Maria%20Vit%C3%B3ria!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="btn-primary">Agendar Consulta</a>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-text">
+                <span class="handwritten" style="font-size: 2rem; display: block; margin-bottom: 0.5rem;">Temos novidades por aqui!</span>
+                <h1>Avaliação <br><span class="highlight">Neuropsicológica</span></h1>
+                <p>A MV Lopes realiza avaliações neuropsicológicas para <strong>adultos, idosos e adolescentes</strong>, com um olhar amplo e individualizado para aspectos cognitivos e emocionais.</p>
+                <a href="https://wa.me/5519998722126?text=Ol%C3%A1%2C%20Maria%20Vit%C3%B3ria!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Avalia%C3%A7%C3%A3o%20Neuropsicol%C3%B3gica." target="_blank" class="btn-primary">Agendar Avaliação</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/maria-vitoria-retrato.jpg" alt="Maria Vitória Lopes - Psicóloga">
+            </div>
+        </section>
+
+        <!-- Credentials Bar -->
+        <div class="credentials-bar">
+            <div class="credential-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--accent-gold)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                Adultos, Idosos e Adolescentes
+            </div>
+            <div class="credential-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--accent-gold)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                Psicóloga CRP 06/220011
+            </div>
+            <div class="credential-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--accent-gold)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                Abordagem TCC
+            </div>
+        </div>
+
+        <!-- Neuro Section -->
+        <section id="avaliacao" class="neuro-section">
+            <div class="container neuro-content">
+                <div class="neuro-text">
+                    <h2>Avaliar é compreender.</h2>
+                    <span class="subtitle">Compreender é abrir novos caminhos.</span>
+                    <p>A avaliação neuropsicológica é um processo detalhado que investiga o funcionamento do cérebro, identificando habilidades preservadas e áreas que necessitam de estimulação ou reabilitação.</p>
+                    
+                    <ul class="neuro-list">
+                        <li>Atenção</li>
+                        <li>Memória</li>
+                        <li>Aprendizagem</li>
+                        <li>Funções Executivas</li>
+                        <li>Linguagem</li>
+                        <li>Raciocínio</li>
+                        <li>Aspectos Emocionais</li>
+                        <li>Habilidades Visuoespaciais</li>
+                    </ul>
+                </div>
+                <div class="neuro-image">
+                    <img src="images/maria-vitoria-consultorio.jpg" alt="Representação de avaliação neuropsicológica">
+                </div>
+            </div>
+        </section>
+
+        <!-- Therapy Section -->
+        <section id="psicoterapia">
+            <div class="container">
+                <div class="section-header">
+                    <span class="handwritten" style="font-size: 2rem;">Agenda Aberta</span>
+                    <h2>Psicoterapia</h2>
+                    <p>Um espaço para cuidar de você.</p>
+                </div>
+                
+                <div class="therapy-grid">
+                    <div class="therapy-card">
+                        <h3>Psicologia Clínica</h3>
+                        <p>Atendimento individual focado nas demandas do paciente, promovendo autoconhecimento e saúde mental.</p>
+                        <div class="tag-list">
+                            <span class="tag">Adultos</span>
+                            <span class="tag">Adolescentes</span>
+                            <span class="tag">Idosos</span>
+                        </div>
+                    </div>
+                    <div class="therapy-card">
+                        <h3>Terapia Cognitivo-Comportamental</h3>
+                        <p>Abordagem estruturada e baseada em evidências para tratar questões como ansiedade, depressão e estresse.</p>
+                        <div class="tag-list">
+                            <span class="tag">TCC</span>
+                            <span class="tag">Foco no Presente</span>
+                        </div>
+                    </div>
+                    <div class="therapy-card">
+                        <h3>Ansiedade e Emoções</h3>
+                        <p>Trabalho específico no manejo de emoções e transtornos de ansiedade, desenvolvendo estratégias práticas de enfrentamento.</p>
+                        <div class="tag-list">
+                            <span class="tag">Manejo Emocional</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section (Explicações Breves) -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="handwritten" style="font-size: 2rem;">Entenda melhor</span>
+                    <h2>Dúvidas Frequentes</h2>
+                </div>
+                
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4>O que é a Avaliação Neuropsicológica?</h4>
+                        <p>É um exame detalhado que mapeia o funcionamento cognitivo (memória, atenção, raciocínio). Ela ajuda a diagnosticar condições como TDAH, Alzheimer ou sequelas de AVC, guiando o tratamento mais adequado.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Qual a diferença entre Avaliação e Psicoterapia?</h4>
+                        <p>A <strong>Avaliação</strong> é um processo focado em "fotografar" como o cérebro está funcionando naquele momento (investigação). A <strong>Psicoterapia</strong> é um acompanhamento contínuo para tratar questões emocionais e comportamentais (intervenção).</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Como funciona o atendimento online?</h4>
+                        <p>As sessões online ocorrem por videochamada (Google Meet ou similar), com a mesma duração e sigilo do presencial. É uma excelente opção para quem tem rotina corrida ou mora em outra cidade.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>O que é a Abordagem TCC?</h4>
+                        <p>A Terapia Cognitivo-Comportamental é uma abordagem prática e focada no presente. Trabalhamos juntos para identificar padrões de pensamento que causam sofrimento e desenvolver novas formas de agir.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="sobre" class="about-section">
+            <div class="container about-content">
+                <div class="about-image">
+                    <img src="images/maria-vitoria-retrato.jpg" alt="Sobre Maria Vitória Lopes">
+                </div>
+                <div class="about-text">
+                    <span class="handwritten">Prazer, eu sou</span>
+                    <h2>Maria Vitória Lopes</h2>
+                    <p>Sou psicóloga clínica com formação em Neuropsicologia pelo IPOG. Acredito que cada pessoa tem uma história única e merece um cuidado individualizado.</p>
+                    <p>Meu compromisso é oferecer um atendimento ético, acolhedor e baseado em evidências científicas, ajudando meus pacientes a compreenderem a si mesmos e a encontrarem caminhos mais saudáveis.</p>
+                    <!-- Botão com mensagem personalizada -->
+                    <a href="https://wa.me/5519998722126?text=Ol%C3%A1%2C%20Maria%20Vit%C3%B3ria!%20Vi%20seu%20site%20e%20gostaria%20de%20conversar." target="_blank" class="btn-primary" style="background-color: var(--accent-gold); color: var(--primary-green);">Vamos conversar?</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">MV Lopes</div>
+            <div class="footer-info">
+                <p>CRP 06/220011</p>
+                <p>© 2024 Maria Vitória Lopes. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
